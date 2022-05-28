@@ -100,7 +100,7 @@ def main():
     shuffle_rooms()
 
     def play_game():
-        while not_complete:
+        while not_complete:  # The while loop that comprises the game will end with the global variable
             current_player.print_menu()
             command = input()
             command_formatted = command.split()
@@ -135,7 +135,7 @@ def main():
                 continue
         print(end_game_message)  # GG.
 
-    while True:  # The while loop that comprises the game will end with the global variable
+    while True:
         current_player = Player()  # Instantiate a new Player object
         acceptable_commands = ["go", "get"]
         play_game()
